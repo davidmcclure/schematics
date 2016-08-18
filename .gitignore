@@ -19,5 +19,6 @@ docs/_build
 /include
 /.Python
 /.cache
+/env
 .coverage
 *.sqlite3

@@ -1,4 +1,4 @@
-import uuid
+# import uuid
 import re
 import datetime
 import decimal
@@ -264,27 +264,27 @@ class BaseType(TypeMeta('BaseTypeBase', (object, ), {})):
         return self._mock(context)
 
 
-class UUIDType(BaseType):
+# class UUIDType(BaseType):
 
-    """A field that stores a valid UUID value.
-    """
-    MESSAGES = {
-        'convert': u"Couldn't interpret '{0}' value as UUID.",
-    }
+    # """A field that stores a valid UUID value.
+    # """
+    # MESSAGES = {
+        # 'convert': u"Couldn't interpret '{0}' value as UUID.",
+    # }
 
-    def _mock(self, context=None):
-        return uuid.uuid4()
+    # def _mock(self, context=None):
+        # return uuid.uuid4()
 
-    def to_native(self, value, context=None):
-        if not isinstance(value, uuid.UUID):
-            try:
-                value = uuid.UUID(value)
-            except (AttributeError, TypeError, ValueError):
-                raise ConversionError(self.messages['convert'].format(value))
-        return value
+    # def to_native(self, value, context=None):
+        # if not isinstance(value, uuid.UUID):
+            # try:
+                # value = uuid.UUID(value)
+            # except (AttributeError, TypeError, ValueError):
+                # raise ConversionError(self.messages['convert'].format(value))
+        # return value
 
-    def to_primitive(self, value, context=None):
-        return str(value)
+    # def to_primitive(self, value, context=None):
+        # return str(value)
 
 
 class IPv4Type(BaseType):

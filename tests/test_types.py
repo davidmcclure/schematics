@@ -1,12 +1,12 @@
 import datetime
 import decimal
-import uuid
+# import uuid
 
 import pytest
 
 from schematics.types import (
     BaseType, StringType, DateTimeType, DateType, IntType, EmailType, LongType,
-    URLType, MultilingualStringType, UUIDType, IPv4Type, MD5Type, BooleanType,
+    URLType, MultilingualStringType, IPv4Type, MD5Type, BooleanType,
     GeoPointType, FloatType, DecimalType, force_unicode
 )
 from schematics.types.base import get_range_endpoints
